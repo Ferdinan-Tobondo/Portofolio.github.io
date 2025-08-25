@@ -1,0 +1,338 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media and (max-width: 1200px) {
+   .main-container {
+    width: 90%
+   } 
+}
+
+
+/*Logo and Nav Menu*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    opacity: 85%;
+}
+
+.nav ul {    
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav  ul  li  a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo  a {
+    color : darkcyan;
+    text-decoration: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+   padding: 0.5rem 1.2rem;
+   background: whitesmoke;
+   border: 1px solid darkgray;
+   cursor: pointer;
+   transition: .2s ease-in-out;
+   
+}
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* burger-menu */
+
+.burger-menu > div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger-menu {
+    display: none;
+    z-index: 99;
+    top: 33px;
+    right: 35px;
+}
+
+/*hero / jumbotron*/
+.hero {
+    height: 100vh;
+    background-image: url('../Images/tes\ BG.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+}
+
+.hero .content {
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero .content h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1;
+    padding: 5px;
+   
+    
+}
+
+.hero .content h2 {
+    font-size: 3rem;
+    color:aquamarine;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1;
+    padding: 5px;
+    
+}
+
+.hero .content p {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1;
+    padding: 5px;
+   
+}
+
+/* Portofolio */
+#Portofolio {
+    background-color: whitesmoke;
+}
+
+#Portofolio > .wrapper > h5 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.grid > .item {
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    display: grid;
+    justify-items: end; /* atau baseline */
+}
+
+.grid > .item > h4 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+.grid > .item > a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+.grid > .item > img {
+   width: 100%;
+   height: 200px;
+   object-fit: fill ;
+   /* offset-distance dihapus */
+}
+
+/* Skills & Education */
+#Skills {
+    padding: 6rem 0;
+    background-color: #fbfbfb;
+}
+
+.Skills > h3 {
+    font-size: 2rem;
+}
+
+.Skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.Education {
+    display: flex;
+    gap: 2rem;
+}
+
+.Education > .line {
+    padding: 0 0.7rem;
+}
+
+.Education > .line > div {
+    width: 1px;
+    height: 100%;
+    background: #fbfbfb ;
+    position: relative;
+}
+
+.Education-info p{
+    margin: 0.6rem 0 1.4rem;
+}
+
+.Education-years {
+    margin-bottom: 3rem;
+}
+
+/* dot on the line */
+.Education > .line > div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 30%;
+    position: absolute;
+    left: 1px;
+}
+
+.Skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.Skills-right > ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/* Contact Section */
+#Contact {
+    padding: 6rem 0;
+}
+
+.Contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.Contact-form div {
+    margin-bottom: 1rem;
+}
+
+.Contact-form input,
+.Contact-form textarea {
+    width: 70%;
+    padding: 0.75rem 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    border: 1px solid;
+    border-radius: 3px;
+    resize: none;
+}
+
+.btn-submit {
+    width: 80%;
+    padding: 0.75rem 1.3rem;
+    background: white;
+    border-color: #f1f1f1;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.Contact-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.Contact-item-icon {
+    background: #f1f1f1;
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 0;
+    background: white;
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+}
+
+.footer-icons {
+    fill: #3e3f40;
+}
+
+.footer-icons a:hover svg {
+    fill: #000;
+}
