@@ -71,7 +71,7 @@ nav ul li {
    border: 1px solid darkgray;
    cursor: pointer;
    transition: .2s ease-in-out;
-   
+    fill: url('../Curriculum\ Vitae\ \(English\).pdf');
 }
 .btn:hover {
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
